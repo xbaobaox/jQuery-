@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h2>标题</h2>
+    <p>这是一个段落</p>
+    <p id="fuck">这是另一个段落</p>
+    <button>点我</button>
+    <button class="btn">点我会消失</button> <br>
+    name: <input type="text" name="fullname"> <br>
+    EMail: <input type="text" name="email">
+  </body>
+  <script src="jquery-3.4.1.js"></script>
+  <script>
+    $(document).ready(function() {
+      //   $("button").click(function() {
+      //     $("#fuck").toggle(1000);
+      //   });
+      $("input").focus(function() {
+        $(this).css("background-color", "#ccc");
+      });
+      $('input').blur(function(){
+          $(this).css('background-color','#fff');
+      })
+    });
+  </script>
+</html>
